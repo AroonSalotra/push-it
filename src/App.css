@@ -18,6 +18,21 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+.btn-a {
+  /* padding: 2rem 4rem; */
+  width: 80vw;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 2rem 1rem;
+}
+
+@media (min-width: 600px) {
+  .btn-a {
+    width: 10rem;
+  }
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
