@@ -1,6 +1,7 @@
 import RegisterSlide01 from "./RegisterSlide01";
 import RegisterSlide02 from "./RegisterSlide02";
 import { useState, useEffect } from "react";
+import { ImPlay3, ImMinus } from "react-icons/im";
 
 const RegisterForm = () => {
   const [index, setIndex] = useState(0);
@@ -10,10 +11,10 @@ const RegisterForm = () => {
 
     if (action === "sub") {
       limit = 200;
-      index + 100 <= limit ? setIndex(index + 100) : null
+      index + 100 <= limit ? setIndex(index + 100) : null;
     } else if (action === "add") {
       limit = 0;
-      index - 100 >= limit ? setIndex(index - 100) : null
+      index - 100 >= limit ? setIndex(index - 100) : null;
     }
 
     console.log(limit);
@@ -37,14 +38,35 @@ const RegisterForm = () => {
         </div>
       </form>
 
-      <button onClick={() => handleClick("add")} type="submit">
-        left
-      </button>
+      <div className="btn-wrapper">
+        <button
+          onClick={() => handleClick("add")}
+          type="submit"
+          className="icon"
+        >
+          <ImPlay3 style={{ transform: "rotate(180deg)" }} />
+        </button>
 
-      <button onClick={() => handleClick("sub")} type="submit">
-        right
-      </button>
+        <i className="icon" style={{ opacity: index === 0 ? "1" : "0.25" }}>
+          <ImMinus />
+        </i>
 
+        <i className="icon" style={{ opacity: index === 100 ? "1" : "0.25" }}>
+          <ImMinus />
+        </i>
+
+        <i className="icon" style={{ opacity: index === 200 ? "1" : "0.25" }}>
+          <ImMinus />
+        </i>
+
+        <button
+          onClick={() => handleClick("sub")}
+          type="submit"
+          className="icon"
+        >
+          <ImPlay3 />
+        </button>
+      </div>
       <h1>{index}</h1>
     </>
   );
