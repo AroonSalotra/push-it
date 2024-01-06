@@ -34,12 +34,25 @@
   cursor: pointer;
 }
 
+.form-container {
+  width: 100%;
+  max-width: 448px;
+  overflow: hidden;
+  transition: transform 1s ease;
+}
+
+.form-slide {
+  display: flex;
+  justify-content: start;
+  transition: transform 1s ease;
+}
+
 .form-title {
   font-size: 1.5rem;
   padding: 2rem 0rem;
 }
 
-.form-container {
+.form-section {
   display: flex;
   flex-direction: column;
   gap: 3rem;
