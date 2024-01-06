@@ -42,7 +42,7 @@ const RegisterForm = () => {
         <button
           onClick={() => handleClick("add")}
           type="submit"
-          className="icon"
+          className="icon interactive"
         >
           <ImPlay3 style={{ transform: "rotate(180deg)" }} />
         </button>
@@ -62,7 +62,7 @@ const RegisterForm = () => {
         <button
           onClick={() => handleClick("sub")}
           type="submit"
-          className="icon"
+          className="icon interactive"
         >
           <ImPlay3 />
         </button>

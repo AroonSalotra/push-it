@@ -68,13 +68,18 @@
 .btn-wrapper {
   display: flex;
   justify-content: center;
-  gap: 5rem;
+  gap: 3rem;
 }
-
 
 .icon {
   all: unset;
-  transform: scale(3);
+  cursor: pointer;
+  transform: scale(2);
+  transition: opacity 200ms ease;
+}
+
+.interactive:hover {
+  transform: scale(2.3);
 }
 
 
