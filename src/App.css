@@ -72,7 +72,8 @@
   }
 
   .form-slide {
-    width: 73vw;
+    width: 70vw;
+    padding: 1rem;
   }
 
   .btn-a:active {

@@ -1,4 +1,5 @@
 import RegisterSlide01 from "./RegisterSlide01";
+import RegisterSlide02 from "./RegisterSlide02";
 import { useState, useEffect } from "react";
 
 const RegisterForm = () => {
@@ -29,8 +30,9 @@ const RegisterForm = () => {
           className="form-slide"
           style={{ transform: `translateX(-${index}%` }}
         >
-          <RegisterSlide01 />
-          <RegisterSlide01 />
+          <RegisterSlide01 title={"Choose your plan!"} />
+          <RegisterSlide02 title={"Set your lifts"} />
+          {/* <RegisterSlide01 /> */}
           <RegisterSlide01 />
         </div>
       </form>
