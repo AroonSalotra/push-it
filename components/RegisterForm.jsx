@@ -7,10 +7,10 @@ const RegisterForm = () => {
   const handleClick = (action) => {
     let limit;
 
-    if (action === "add") {
+    if (action === "sub") {
       limit = 200;
       index + 100 <= limit ? setIndex(index + 100) : null
-    } else if (action === "sub") {
+    } else if (action === "add") {
       limit = 0;
       index - 100 >= limit ? setIndex(index - 100) : null
     }
