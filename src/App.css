@@ -22,7 +22,7 @@
 
 .btn-a {
   /* padding: 2rem 4rem; */
-  width: 80vw;
+  width: 70vw;
   font-size: 1rem;
   border: none;
   border-radius: 0.5rem;
@@ -34,10 +34,16 @@
   cursor: pointer;
 }
 
-.form-register {
+.form-title {
+  font-size: 1.5rem;
+  padding: 2rem 0rem;
+}
+
+.form-container {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  border: none;
 }
 
 
