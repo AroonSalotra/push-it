@@ -1,9 +1,9 @@
 const RegisterBtn = (props) => {
 
-    const {body} = props;
+    const {body, isAdd, isSub, setIndex, index} = props;
 
     return ( 
-        <button>
+        <button onClick={isAdd ? setIndex(index + 100) }>
             {body}
         </button>
      );

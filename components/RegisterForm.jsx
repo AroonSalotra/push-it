@@ -1,9 +1,22 @@
 import RegisterSlide01 from "./RegisterSlide01";
-import { useState } from "react";
-import RegisterBtn from "./RegisterBtn";
+import { useState, useEffect } from "react";
 
 const RegisterForm = () => {
-  const [index, setIndex] = useState(100);
+  const [index, setIndex] = useState(0);
+
+  const handleClick = (action) => {
+    let limit;
+
+    if (action === "add") {
+      limit = 200;
+      index + 100 <= limit ? setIndex(index + 100) : null
+    } else if (action === "sub") {
+      limit = 0;
+      index - 100 >= limit ? setIndex(index - 100) : null
+    }
+
+    console.log(limit);
+  };
 
   return (
     <>
@@ -22,8 +35,15 @@ const RegisterForm = () => {
         </div>
       </form>
 
-      <RegisterBtn body="left" />
-      <RegisterBtn body="right" />
+      <button onClick={() => handleClick("add")} type="submit">
+        left
+      </button>
+
+      <button onClick={() => handleClick("sub")} type="submit">
+        right
+      </button>
+
+      <h1>{index}</h1>
     </>
   );
 };
